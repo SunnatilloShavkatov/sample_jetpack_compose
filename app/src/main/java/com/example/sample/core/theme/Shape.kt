@@ -13,8 +13,10 @@ val Shapes = Shapes(
 
 class AppShape {
     companion object {
-        val small = RoundedCornerShape(4.dp)
+        val none = RoundedCornerShape(0.dp)
         val cornerShape8 = RoundedCornerShape(8.dp)
+        val cornerShape16 = RoundedCornerShape(16.dp)
+        val small = RoundedCornerShape(4.dp)
         val medium = RoundedCornerShape(4.dp)
         val large = RoundedCornerShape(0.dp)
     }

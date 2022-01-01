@@ -38,12 +38,12 @@ fun MainScreen(nav: NavHostController) {
         modifier = Modifier.background(color = AppColor.background),
         bottomBar = { BottomNavigation(navController = navController) }
     ) {
-        NavigationMainGraph(navController = navController, nav = nav)
+        NavigationMainGraph(navController = navController, route = nav)
     }
 }
 
 @Composable
-fun NavigationMainGraph(navController: NavHostController, nav: NavHostController) {
+fun NavigationMainGraph(navController: NavHostController, route: NavHostController) {
     NavHost(navController, startDestination = BottomNavItem.Home.screen_route) {
         composable(BottomNavItem.Home.screen_route) {
             HomeScreen()
@@ -55,7 +55,7 @@ fun NavigationMainGraph(navController: NavHostController, nav: NavHostController
             FavouriteScreen()
         }
         composable(BottomNavItem.Profile.screen_route) {
-            ProfileScreen(navController = nav)
+            ProfileScreen(route = route)
         }
     }
 }
