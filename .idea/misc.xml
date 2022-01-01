@@ -4,12 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/compose-model-1640404364926.xml" value="0.7292418772563177" />
+        <entry key="app/src/main/res/drawable/ic_active_heart.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_active_home.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_active_shopping_bag.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_active_user.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_heart.xml" value="0.175" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.18703703703703703" />
         <entry key="app/src/main/res/drawable/ic_jobs.xml" value="0.18703703703703703" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.18703703703703703" />
         <entry key="app/src/main/res/drawable/ic_my_network.xml" value="0.18703703703703703" />
         <entry key="app/src/main/res/drawable/ic_notifications.xml" value="0.18703703703703703" />
         <entry key="app/src/main/res/drawable/ic_post.xml" value="0.18703703703703703" />
+        <entry key="app/src/main/res/drawable/ic_shopping_bag.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_user.xml" value="0.175" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.18703703703703703" />
       </map>
     </option>
