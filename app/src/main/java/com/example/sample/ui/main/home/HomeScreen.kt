@@ -1,6 +1,5 @@
 package com.example.sample.ui.main.home
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -27,7 +26,9 @@ fun HomeScreen() {
                 backgroundColor = AppColor.white,
                 title = {
                     TextField(
-                        modifier = Modifier.fillMaxWidth().height(50.dp),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp),
                         value = textState,
                         onValueChange = { textState = it },
                         placeholder = { Text(text = "Поиск") },
@@ -51,15 +52,16 @@ fun HomeScreen() {
                     )
                 },
                 actions = {
-                    Icon(
-                        painter = painterResource(R.drawable.ic_bell),
-                        contentDescription = "bell",
-                        modifier = Modifier
-                            .size(20.dp)
-                            .clickable(
-                                onClick = {}
-                            )
-                    )
+                    IconButton(onClick = { /*TODO*/ }
+                    ) {
+                        Icon(
+                            painter = painterResource(R.drawable.ic_bell),
+                            contentDescription = "bell",
+                            modifier = Modifier
+                                .size(20.dp)
+                        )
+                    }
+
                 }
             )
         },
