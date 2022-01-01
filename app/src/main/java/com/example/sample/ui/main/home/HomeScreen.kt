@@ -1,28 +1,81 @@
 package com.example.sample.ui.main.home
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.example.sample.R
+import com.example.sample.core.theme.AppColor
+import com.example.sample.core.theme.AppShape
 
-
+@Preview
 @Composable
 fun HomeScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .wrapContentSize(Alignment.Center)
-    ) {
-        Text(
-            text = "Home Screen",
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-        )
-    }
+    var textState by remember { mutableStateOf(TextFieldValue()) }
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        topBar = {
+            TopAppBar(
+                backgroundColor = AppColor.white,
+                title = {
+                    TextField(
+                        modifier = Modifier.fillMaxWidth().height(50.dp),
+                        value = textState,
+                        onValueChange = { textState = it },
+                        placeholder = { Text(text = "Поиск") },
+                        leadingIcon = {
+                            Icon(
+                                painter = painterResource(R.drawable.ic_search),
+                                contentDescription = "bell",
+                                modifier = Modifier.size(16.dp),
+                                tint = AppColor.grey,
+                            )
+                        },
+                        singleLine = true,
+                        colors = TextFieldDefaults.textFieldColors(
+                            backgroundColor = AppColor.textBackground,
+                            cursorColor = AppColor.black,
+                            disabledLabelColor = AppColor.textBackground,
+                            focusedIndicatorColor = AppColor.transparent,
+                            unfocusedIndicatorColor = AppColor.transparent
+                        ),
+                        shape = AppShape.cornerShape8,
+                    )
+                },
+                actions = {
+                    Icon(
+                        painter = painterResource(R.drawable.ic_bell),
+                        contentDescription = "bell",
+                        modifier = Modifier
+                            .size(20.dp)
+                            .clickable(
+                                onClick = {}
+                            )
+                    )
+                }
+            )
+        },
+        content = {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .wrapContentSize(Alignment.TopCenter)
+            ) {
+                LazyColumn {
+                    items(listOf("Hello,", "world!")) { item ->
+                        Text(text = item, color = AppColor.black)
+                    }
+                }
+            }
+        }
+    )
+
 }

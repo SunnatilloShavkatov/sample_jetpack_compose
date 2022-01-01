@@ -1,7 +1,10 @@
 package com.example.sample.ui.main
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
@@ -67,7 +70,7 @@ fun BottomNavigation(navController: NavController) {
     )
     androidx.compose.material.BottomNavigation(
         backgroundColor = AppColor.white,
-        contentColor = Color.Black
+        modifier = Modifier.fillMaxWidth()
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
@@ -78,14 +81,17 @@ fun BottomNavigation(navController: NavController) {
                         Icon(
                             painterResource(id = item.activeIcon),
                             contentDescription = item.title,
-                            modifier = Modifier.padding(top = 3.dp, bottom = 3.dp)
+                            modifier = Modifier
+                                .padding(top = 3.dp, bottom = 3.dp)
+                                .then(Modifier.size(18.dp))
                         )
                     } else {
-
                         Icon(
                             painterResource(id = item.icon),
                             contentDescription = item.title,
-                            modifier = Modifier.padding(top = 3.dp, bottom = 3.dp)
+                            modifier = Modifier
+                                .padding(top = 3.dp, bottom = 3.dp)
+                                .then(Modifier.size(18.dp))
                         )
                     }
                 },
@@ -94,7 +100,7 @@ fun BottomNavigation(navController: NavController) {
                         text = item.title,
                         fontSize = 13.sp,
                         fontWeight = FontWeight.W400,
-                        modifier = Modifier.padding(bottom = 3.dp, top = 3.dp)
+                        modifier = Modifier.padding(top = 3.dp)
                     )
                 },
                 selectedContentColor = AppColor.blue,

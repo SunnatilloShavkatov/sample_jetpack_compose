@@ -15,7 +15,7 @@ fun AppNavigation() {
             MainScreen(nav = navController)
         }
         composable(Routes.setting) {
-            SettingsScreen()
+            SettingsScreen(nav = navController)
         }
     }
 }

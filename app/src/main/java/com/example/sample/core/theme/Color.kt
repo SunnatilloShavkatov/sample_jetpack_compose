@@ -13,6 +13,8 @@ class AppColor {
         val blue = Color(0xFF007AFF)
         val background = Color(0xFFF9F9FD)
         val black = Color(0xFF000000)
+        val textBackground = Color(0xFFF9F9FD)
+        val transparent = Color(0x00000000)
     }
 
 }

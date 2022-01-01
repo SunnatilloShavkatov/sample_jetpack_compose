@@ -8,17 +8,23 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-    primary = AppColor.purple200,
+    primary = AppColor.white,
     primaryVariant = AppColor.purple500,
-    secondary = AppColor.teal200
+    secondary = AppColor.teal200,
+    background = AppColor.background,
+    surface = AppColor.white,
+    onPrimary = AppColor.black,
+    onSecondary = AppColor.black,
+    onBackground = AppColor.black,
+    onSurface = AppColor.black,
 )
 
 @SuppressLint("ConflictingOnColor")
 private val LightColorPalette = lightColors(
-    primary = AppColor.purple500,
+    primary = AppColor.white,
     primaryVariant = AppColor.purple500,
     secondary = AppColor.teal200,
-    background = AppColor.white,
+    background = AppColor.background,
     surface = AppColor.white,
     onPrimary = AppColor.black,
     onSecondary = AppColor.black,

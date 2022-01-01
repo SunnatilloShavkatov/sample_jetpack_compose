@@ -12,7 +12,6 @@ fun BasketScreen() {
         topBar = {
             TopAppBar(
                 title = { Text("Basket") },
-                backgroundColor = MaterialTheme.colors.primary, elevation = 0.dp
             )
         },
         content = { Text(" Basket ") },
