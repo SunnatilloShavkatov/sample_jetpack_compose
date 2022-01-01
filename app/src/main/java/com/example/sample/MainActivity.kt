@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.*
-import androidx.navigation.compose.rememberNavController
 import com.example.sample.core.theme.MyApplicationTheme
 import com.example.sample.routes.AppNavigation
 

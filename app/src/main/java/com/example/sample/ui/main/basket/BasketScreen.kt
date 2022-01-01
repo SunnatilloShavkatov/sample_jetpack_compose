@@ -1,36 +1,21 @@
 package com.example.sample.ui.main.basket
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.sp
-import com.example.sample.R
-import com.example.sample.core.theme.White
-
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun BasketScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(colorResource(id = R.color.teal_700))
-            .wrapContentSize(Alignment.Center)
-    ) {
-        Text(
-            text = "My Network Screen",
-            fontWeight = FontWeight.Bold,
-            color = White,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-            fontSize = 20.sp
-        )
-    }
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Basket") },
+                backgroundColor = MaterialTheme.colors.primary, elevation = 0.dp
+            )
+        },
+        drawerContent = { Text(text = "Basket") },
+        content = { Text("Content") },
+        bottomBar = { BottomAppBar(backgroundColor = MaterialTheme.colors.primary) { Text("Bottom App Bar") } }
+    )
+
 }

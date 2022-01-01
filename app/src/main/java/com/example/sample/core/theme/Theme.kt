@@ -1,5 +1,6 @@
 package com.example.sample.core.theme
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
@@ -7,23 +8,23 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = AppColor.purple200,
+    primaryVariant = AppColor.purple500,
+    secondary = AppColor.teal200
 )
 
+@SuppressLint("ConflictingOnColor")
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200,
-    background = White,
-    surface = White,
-    onPrimary = White,
-    onSecondary = Black,
-    onBackground = Black,
-    onSurface = Black,
-
-    )
+    primary = AppColor.purple500,
+    primaryVariant = AppColor.purple500,
+    secondary = AppColor.teal200,
+    background = AppColor.white,
+    surface = AppColor.white,
+    onPrimary = AppColor.black,
+    onSecondary = AppColor.black,
+    onBackground = AppColor.black,
+    onSurface = AppColor.black,
+)
 
 @Composable
 fun MyApplicationTheme(

@@ -11,16 +11,16 @@ import com.example.sample.ui.main.profile.settings.SettingsScreen
 fun AppNavigation() {
     val navController = rememberNavController()
     NavHost(navController, startDestination = "main") {
-        composable(RoutesScreens.main) {
+        composable(Routes.main) {
             MainScreen(nav = navController)
         }
-        composable(RoutesScreens.setting) {
+        composable(Routes.setting) {
             SettingsScreen()
         }
     }
 }
 
-class RoutesScreens {
+class Routes {
     companion object {
         const val main: String = "main"
         const val setting: String = "settings"

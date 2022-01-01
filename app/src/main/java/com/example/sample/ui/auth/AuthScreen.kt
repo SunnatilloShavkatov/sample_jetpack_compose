@@ -13,7 +13,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import com.example.sample.R
-import com.example.sample.core.theme.White
 
 @Composable
 fun AuthScreen() {
@@ -26,7 +25,6 @@ fun AuthScreen() {
         Text(
             text = "Notification Screen",
             fontWeight = FontWeight.Bold,
-            color = White,
             modifier = Modifier.align(Alignment.CenterHorizontally),
             textAlign = TextAlign.Center,
             fontSize = 20.sp

@@ -13,20 +13,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import com.example.sample.R
-import com.example.sample.core.theme.White
 
 @Composable
 fun SplashScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(colorResource(id = R.color.teal_700))
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
             text = "Notification Screen",
             fontWeight = FontWeight.Bold,
-            color = White,
             modifier = Modifier.align(Alignment.CenterHorizontally),
             textAlign = TextAlign.Center,
             fontSize = 20.sp
