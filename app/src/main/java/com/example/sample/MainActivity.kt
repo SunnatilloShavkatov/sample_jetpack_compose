@@ -11,7 +11,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
             MyApplicationTheme {
                 Surface(color = MaterialTheme.colors.background) {
                     AppNavigation()
