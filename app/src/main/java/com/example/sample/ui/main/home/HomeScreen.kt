@@ -61,8 +61,7 @@ fun HomeScreen() {
                                 .size(20.dp)
                         )
                     }
-
-                }
+                }, elevation = 1.dp
             )
         },
         content = {
@@ -79,5 +78,4 @@ fun HomeScreen() {
             }
         }
     )
-
 }

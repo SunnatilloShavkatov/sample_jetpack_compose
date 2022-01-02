@@ -3,27 +3,25 @@ package com.example.sample.routes
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
+import com.example.sample.di.NavigationModule
 import com.example.sample.ui.main.MainScreen
 import com.example.sample.ui.main.profile.settings.SettingsScreen
 
 @Composable
 fun AppNavigation() {
-    val navController = rememberNavController()
-    NavHost(navController, startDestination = "main") {
+    val routes = NavigationModule.provideNavHostController()
+    NavHost(routes, startDestination = Routes.main) {
         composable(Routes.main) {
-            MainScreen(nav = navController)
+            MainScreen(routes)
         }
         composable(Routes.setting) {
-            SettingsScreen(nav = navController)
+            SettingsScreen(routes)
         }
     }
 }
 
-class Routes {
-    companion object {
-        const val main: String = "main"
-        const val setting: String = "settings"
-    }
+object Routes {
+    const val main: String = "main"
+    const val setting: String = "settings"
 }
 

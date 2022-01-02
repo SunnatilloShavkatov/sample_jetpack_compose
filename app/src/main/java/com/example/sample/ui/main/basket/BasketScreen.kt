@@ -12,6 +12,7 @@ fun BasketScreen() {
         topBar = {
             TopAppBar(
                 title = { Text("Basket") },
+                elevation = 1.dp
             )
         },
         content = { Text(" Basket ") },

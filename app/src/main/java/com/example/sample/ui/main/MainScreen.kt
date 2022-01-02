@@ -2,7 +2,6 @@ package com.example.sample.ui.main
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.BottomNavigationItem
@@ -12,10 +11,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -32,18 +29,18 @@ import com.example.sample.ui.main.home.HomeScreen
 import com.example.sample.ui.main.profile.ProfileScreen
 
 @Composable
-fun MainScreen(nav: NavHostController) {
+fun MainScreen(routes: NavHostController) {
     val navController = rememberNavController()
     Scaffold(
         modifier = Modifier.background(color = AppColor.background),
         bottomBar = { BottomNavigation(navController = navController) }
     ) {
-        NavigationMainGraph(navController = navController, route = nav)
+        NavigationMainGraph(navController = navController, routes = routes)
     }
 }
 
 @Composable
-fun NavigationMainGraph(navController: NavHostController, route: NavHostController) {
+fun NavigationMainGraph(navController: NavHostController, routes: NavHostController) {
     NavHost(navController, startDestination = BottomNavItem.Home.screen_route) {
         composable(BottomNavItem.Home.screen_route) {
             HomeScreen()
@@ -55,7 +52,7 @@ fun NavigationMainGraph(navController: NavHostController, route: NavHostControll
             FavouriteScreen()
         }
         composable(BottomNavItem.Profile.screen_route) {
-            ProfileScreen(route = route)
+            ProfileScreen(routes)
         }
     }
 }

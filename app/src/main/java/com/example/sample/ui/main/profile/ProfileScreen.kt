@@ -16,7 +16,8 @@ import com.example.sample.ui.main.profile.widget.ProfileItem
 
 @Preview
 @Composable
-fun ProfileScreen(route: NavHostController) {
+fun ProfileScreen(routes: NavHostController) {
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -103,7 +104,7 @@ fun ProfileScreen(route: NavHostController) {
                         ProfileItem(
                             text = "Настройки",
                             onClick = {
-                                route.navigate(Routes.setting)
+                                routes.navigate(Routes.setting)
                             },
                             iconId = R.drawable.ic_settings,
                         )
