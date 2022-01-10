@@ -17,7 +17,6 @@ import com.example.sample.ui.main.profile.widget.ProfileItem
 @Preview
 @Composable
 fun ProfileScreen(routes: NavHostController) {
-
     Scaffold(
         topBar = {
             TopAppBar(

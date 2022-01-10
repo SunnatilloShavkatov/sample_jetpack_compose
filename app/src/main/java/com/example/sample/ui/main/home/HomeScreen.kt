@@ -14,6 +14,9 @@ import androidx.compose.ui.unit.dp
 import com.example.sample.R
 import com.example.sample.core.theme.AppColor
 import com.example.sample.core.theme.AppShape
+import com.example.sample.di.SharedPreferencesModule
+import javax.inject.Inject
+
 
 @Preview
 @Composable

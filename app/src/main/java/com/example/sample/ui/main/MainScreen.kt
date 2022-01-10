@@ -80,7 +80,7 @@ fun BottomNavigation(navController: NavController) {
                             contentDescription = item.title,
                             modifier = Modifier
                                 .padding(top = 3.dp, bottom = 3.dp)
-                                .then(Modifier.size(18.dp))
+                                .size(18.dp)
                         )
                     } else {
                         Icon(
@@ -88,7 +88,7 @@ fun BottomNavigation(navController: NavController) {
                             contentDescription = item.title,
                             modifier = Modifier
                                 .padding(top = 3.dp, bottom = 3.dp)
-                                .then(Modifier.size(18.dp))
+                                .size(18.dp)
                         )
                     }
                 },
