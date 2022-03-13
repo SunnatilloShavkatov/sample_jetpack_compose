@@ -11,7 +11,7 @@ import androidx.navigation.NavHostController
 import com.example.sample.R
 import com.example.sample.core.theme.AppColor
 import com.example.sample.core.theme.AppShape
-import com.example.sample.routes.Routes
+import com.example.sample.routes.AppRoutes
 import com.example.sample.ui.main.profile.widget.ProfileItem
 
 @Preview
@@ -103,7 +103,7 @@ fun ProfileScreen(routes: NavHostController) {
                         ProfileItem(
                             text = "Настройки",
                             onClick = {
-                                routes.navigate(Routes.setting)
+                                routes.navigate(AppRoutes.setting)
                             },
                             iconId = R.drawable.ic_settings,
                         )
